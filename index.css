@@ -1,0 +1,210 @@
+:root {
+
+    --colour-Stone-100: hsl(30, 54%, 90%);
+    --colour-Stone-150: hsl(30, 18%, 87%);
+    --colour-Stone-600: hsl(30, 10%, 34%);
+    --colour-Stone-900: hsl(24, 5%, 18%);
+
+    --colour-Brown-800: hsl(14, 45%, 36%);
+
+    --colour-Rose-800: hsl(332, 51%, 32%);
+    --colour-Rose-50: hsl(330, 100%, 98%);
+    --colour-page-background:hsl(29, 53%, 90%);
+
+    --fontFamily-youngSerif: "Young Serif", serif;
+    --fontFamily-youngSerif: "Young Serif", serif;
+    --fontFamily-outfit: "Outfit", sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fontFamily-outfit);
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--colour-page-background);
+    padding: 0.2em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+hr {
+    border: 1px solid var(--colour-Stone-100);
+    margin: 2rem 0;
+    justify-self:last baseline;
+}
+
+h1 {
+    font-family: var(--fontFamily-youngSerif);
+    font-weight: 400;
+    font-size: clamp(1.2rem, 1.2rem + 1.5vw, 2.5rem);
+    line-height: 2;
+    padding-top: 0.5em;
+    color: var(--colour-Stone-900)
+}
+
+h2 {
+    font-family: var(--fontFamily-youngSerif);
+    font-weight: 400;
+    color: var(--colour-Stone-600)
+}
+
+h3 {
+    color: var(--colour-Rose-800)
+}
+
+p {
+    font-size: 1rem;
+    color: var(--colour-Stone-600);
+    line-height: 1.2;
+    margin-bottom: 0.5em;;
+}
+
+ul, ol {
+    margin-left: 1.5em;
+}
+
+li {
+    padding-top: 1em;
+    padding-left: 1em;
+}
+
+
+ol > li::marker {
+    font-weight:bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    width: 50%;
+    padding: 0.5em 1em;
+}
+
+tr:not(:last-of-type) {
+    border-bottom: 1px solid var(--colour-Stone-100);
+}
+
+.outfit-400 {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.wrapper--recipe-card {
+    background-color: white;
+    display:grid;
+    padding: 2em;
+    border-radius: 15px;
+    margin: 5em 0em;
+}
+
+.grid--portrait {
+    max-width: 700px;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five"
+    ;
+}
+
+.grid--landscape {
+    max-width: 1078px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    grid-template-areas:
+    "one three four"
+    "one three four"
+    "two five four"
+    ;
+    h1 {
+        line-height: normal;
+    }
+
+    .preparation {
+        margin: 0;
+    }
+}
+
+/* ======= Recipe Card Sections ========= */
+
+.intro {
+    grid-area: one;
+}
+
+.preparation {
+    grid-area: two;
+    background-color: var(--colour-Rose-50);
+    padding: 1.5em;
+    margin: 2em 0;
+}
+
+.ingredients {
+    grid-area: three;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.instructions {
+    grid-area:four;
+}
+
+.nutrition {
+    grid-area:five;
+}
+
+
+/* ======= Recipe Card Elements ========= */
+.photo--recipe {
+    border-radius: 10px;
+    overflow: hidden;
+     img {
+         width: 100%;
+         display: block;
+     }
+ }
+
+ .button--rotate {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 10px;
+    overflow: hidden;
+    background-color: var(--colour-Rose-800);
+    fill: white;
+    position: relative;
+    float: inline-end;
+    top: -25px;
+    transition: 0.3s;
+}
+
+.button--rotate:hover {
+    background-color: var(--colour-Rose-50);
+    fill: var(--colour-Stone-900);
+    outline: 1px solid var(--colour-Rose-800);
+    scale: 1.1;
+    transition: 0.3s;
+}
+
+.hidden {
+    display:none;
+}
+
+.nutrition p {
+    margin: 1em 0;
+}
