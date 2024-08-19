@@ -36,7 +36,8 @@ main {
 }
 
 hr {
-    border: 1px solid var(--colour-Stone-100);
+    border: none;
+    border-bottom: 1px solid var(--colour-Stone-100);
     margin: 2rem 0;
     justify-self:last baseline;
 }
@@ -150,7 +151,7 @@ tr:not(:last-of-type) {
 .preparation {
     grid-area: two;
     background-color: var(--colour-Rose-50);
-    padding: 1.5em;
+    padding: 1.8em 1.5em;
     margin: 2em 0;
 }
 
@@ -208,4 +209,9 @@ tr:not(:last-of-type) {
 
 .nutrition p {
     margin: 1em 0;
+}
+
+.color--brown-bold {
+    color: var(--colour-Brown-800);
+    font-weight: bold;
 }
